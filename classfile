@@ -1,0 +1,35 @@
+"""
+Banking Account example
+"""
+class Account:
+
+    """ Banking Account example"""
+    def open(self, x, s1, y):
+        self.id = x
+        self.name = s1
+        self.balance = y
+
+    def debit(self,amount):
+        self.balance -= amount
+
+    def credit(self,amount):
+        self.balance += amount 
+
+    def display(self):
+        print("Account id:", self.id)
+        print("Account name:", self.name)
+        print("Account balance", self.balance)
+
+    def getBalance(self):
+        return self.balance
+
+#Using the class, creating objects, invoking members
+a1 = Account()
+a1.open(1001, "John", 5000.0)
+a1.credit(2000)
+a1.debit(1500)
+a1.display()
+
+a2 = Account()
+a2.open(1002, "Ram", 6000)
+a2.display()
